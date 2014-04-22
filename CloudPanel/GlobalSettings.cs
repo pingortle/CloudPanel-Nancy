@@ -11,8 +11,8 @@ namespace CloudPanel
         {
             AppName = "CloudPanel";
 
-            TimeoutMilliseconds = HttpContext.Current.Session.Timeout * 60 * 1000;
-            TimeoutMilliseconds = (HttpContext.Current.Session.Timeout - 2) * 60 * 1000;
+            TimeoutMilliseconds = 10 * 60 * 1000;
+            TimeoutWarningMilliseconds = 8 * 60 * 1000;
         }
 
         public static string AppName { get; set; }

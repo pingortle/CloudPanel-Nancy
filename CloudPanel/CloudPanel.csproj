@@ -612,8 +612,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <Content Include="Content\css\.DS_Store" />
-    <Content Include="Content\fonts\.DS_Store" />
     <Content Include="Content\fonts\fontawesome-webfont.eot" />
     <Content Include="Content\fonts\fontawesome-webfont.ttf" />
     <Content Include="Content\fonts\fontawesome-webfont.woff" />
@@ -699,11 +697,7 @@
     <Content Include="Content\fonts\roboto\Roboto-ThinItalic-webfont.eot" />
     <Content Include="Content\fonts\roboto\Roboto-ThinItalic-webfont.ttf" />
     <Content Include="Content\fonts\roboto\Roboto-ThinItalic-webfont.woff" />
-    <Content Include="Content\images\colorpicker\.DS_Store" />
     <Content Include="Content\images\colorpicker\Thumbs.db" />
-    <Content Include="Content\images\photos\.DS_Store" />
-    <Content Include="Content\js\.DS_Store" />
-    <Content Include="Content\js\ckeditor\.DS_Store" />
     <Content Include="Content\js\ckeditor\LICENSE.md" />
     <Content Include="Content\js\ckeditor\plugins\scayt\LICENSE.md" />
     <Content Include="Content\js\ckeditor\plugins\scayt\README.md" />
@@ -712,9 +706,8 @@
     <Content Include="Content\js\ckeditor\samples\plugins\htmlwriter\assets\outputforflash\outputforflash.fla" />
     <Content Include="Content\js\ckeditor\skins\moono\readme.md" />
     <Content Include="Content\js\ckeditor\skins\themepixels\readme.md" />
-    <Content Include="Content\js\codemirror\.DS_Store" />
-    <Content Include="View\MasterLayout.cshtml" />
-    <Content Include="View\dashboard.cshtml" />
+    <Content Include="Views\MasterLayout.cshtml" />
+    <Content Include="Views\dashboard.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

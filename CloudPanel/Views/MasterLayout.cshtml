@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<dynamic>
+@using CloudPanel
+
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -7,7 +11,7 @@
   <meta name="author" content="">
   <link rel="shortcut icon" href="images/favicon.png" type="image/png">
 
-  <title>@View.Title</title>
+  <title>@ViewBag.Title</title>
 
   <link href="Content/css/style.default.css" rel="stylesheet">
   <link href="Content/css/jquery.datatables.css" rel="stylesheet">
@@ -358,7 +362,7 @@
     </div><!-- headerbar -->
     
     <div class="pageheader">
-      <h2><i class="fa fa-home"></i> @View.Title <span>Subtitle goes here...</span></h2>
+      <h2><i class="fa fa-home"></i> @ViewBag.Title <span>Subtitle goes here...</span></h2>
       <div class="breadcrumb-wrapper">
         <span class="label">You are here:</span>
         <ol class="breadcrumb">
