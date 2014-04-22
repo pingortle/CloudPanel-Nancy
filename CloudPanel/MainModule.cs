@@ -15,7 +15,7 @@ namespace CloudPanel
 
             Get["/login"] = _ => "Username: ________\n Password: ________";
 
-            Get["/dashboard"] = _ => "This is the dashboard.";
+            Get["/dashboard"] = _ => View["dashboard"];
         }
     }
 }
