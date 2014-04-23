@@ -11,7 +11,8 @@ namespace CloudPanel.Modules
     {
         public Root()
         {
-            Get["/"] = _ => "Welcome to CloudPanel!";
+            Get["/", ctx => ctx.CurrentUser == null] = _ => Response.AsRedirect("~/login");
+            Get["/", ctx => ctx.CurrentUser != null] = _ => Response.AsRedirect("~/dashboard");
         }
     }
 }
