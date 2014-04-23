@@ -6,20 +6,16 @@ using System.Web;
 using Nancy;
 using Nancy.Authentication.Forms;
 
-namespace CloudPanel
+namespace CloudPanel.Modules
 {
-    public class MainModule : NancyModule
+    public class Login : NancyModule
     {
-        public MainModule()
+        public Login()
         {
-            Get["/"] = _ => "Welcome to CloudPanel!";
-
             Get["/login"] = _ => View["login"];
             Post["/login"] = _ => this.LoginAndRedirect(Guid.NewGuid(), null, "dashboard");
 
             Get["/logout"] = _ => this.Logout("/");
-
-            Get["/dashboard"] = _ => View["dashboard"];
         }
     }
 }

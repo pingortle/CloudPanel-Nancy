@@ -611,7 +611,9 @@
   <ItemGroup>
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="GlobalSettings.cs" />
-    <Compile Include="MainModule.cs" />
+    <Compile Include="Modules\Dashboard.cs" />
+    <Compile Include="Modules\Login.cs" />
+    <Compile Include="Modules\Root.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserIdentity.cs" />
     <Compile Include="UserMapper.cs" />
