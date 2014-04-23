@@ -13,7 +13,16 @@ namespace CloudPanel.Modules
         public Login()
         {
             Get["/login"] = _ => View["login"];
-            Post["/login"] = _ => this.LoginAndRedirect(Guid.NewGuid(), null, "dashboard");
+            Post["/login"] = x =>
+                {
+                    if (Request.Form.uname == "admin" && Request.Form.pword == "admin")
+                        return this.LoginAndRedirect(Guid.NewGuid(), null, "dashboard");
+                    else
+                    {
+                        ViewBag.message = "Failed!";
+                        return View["login"];
+                    }
+                };
 
             Get["/logout"] = _ => this.Logout("/");
         }
