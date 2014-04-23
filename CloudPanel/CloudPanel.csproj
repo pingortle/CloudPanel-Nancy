@@ -598,6 +598,7 @@
     <Content Include="Content\js\jquery.tagsinput.min.js" />
     <Content Include="Content\js\jquery.ui.touch-punch.min.js" />
     <Content Include="Content\js\jquery.validate.min.js" />
+    <Content Include="Content\js\knockout-3.1.0.js" />
     <Content Include="Content\js\masonry.pkgd.min.js" />
     <Content Include="Content\js\modernizr.min.js" />
     <Content Include="Content\js\morris.min.js" />
@@ -611,6 +612,7 @@
   <ItemGroup>
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="GlobalSettings.cs" />
+    <Compile Include="Modules\AuthRoot.cs" />
     <Compile Include="Modules\Dashboard.cs" />
     <Compile Include="Modules\Login.cs" />
     <Compile Include="Modules\Root.cs" />
@@ -717,6 +719,7 @@
     <Content Include="Views\_layout.cshtml" />
     <Content Include="Views\dashboard.cshtml" />
     <Content Include="Views\login.cshtml" />
+    <Content Include="Views\settings.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
