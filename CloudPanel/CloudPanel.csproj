@@ -706,7 +706,7 @@
     <Content Include="Content\js\ckeditor\samples\plugins\htmlwriter\assets\outputforflash\outputforflash.fla" />
     <Content Include="Content\js\ckeditor\skins\moono\readme.md" />
     <Content Include="Content\js\ckeditor\skins\themepixels\readme.md" />
-    <Content Include="Views\MasterLayout.cshtml" />
+    <Content Include="Views\_layout.cshtml" />
     <Content Include="Views\dashboard.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
