@@ -6,6 +6,8 @@ using System.Web;
 using Nancy;
 using Nancy.Security;
 
+using CloudPanel.Persistence;
+
 namespace CloudPanel.Modules
 {
     public class Dashboard : NancyModule
