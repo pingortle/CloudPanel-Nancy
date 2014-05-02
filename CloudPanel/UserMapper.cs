@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Linq;
 
 using Nancy.Authentication.Forms;
+using CloudPanel.Persistence;
 
 namespace CloudPanel
 {
@@ -8,7 +10,14 @@ namespace CloudPanel
     {
         public Nancy.Security.IUserIdentity GetUserFromIdentifier(Guid identifier, Nancy.NancyContext context)
         {
-            return new UserIdentity();
+            UserIdentity userId = null;
+            using (var ctx = new CloudPanelContext())
+            {
+                var user = ctx.Users.Where(x => x.Guid == identifier).FirstOrDefault();
+                userId = new UserIdentity(user.Username, user.Claims.Select(x => x.Key).ToArray());
+            }
+
+            return userId;
         }
     }
 }

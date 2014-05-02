@@ -619,7 +619,9 @@
   <ItemGroup>
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="GlobalSettings.cs" />
+    <Compile Include="Models\Claim.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserClaim.cs" />
     <Compile Include="Modules\AuthRoot.cs" />
     <Compile Include="Modules\Dashboard.cs" />
     <Compile Include="Modules\Login.cs" />

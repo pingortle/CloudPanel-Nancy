@@ -10,6 +10,10 @@ namespace CloudPanel.Models
         public int Id { get; set; }
 
         public string Username { get; set; }
+        public string Password { get; set; }
+
         public Guid Guid { get; set; }
+
+        public virtual IList<Claim> Claims { get; set; }
     }
 }

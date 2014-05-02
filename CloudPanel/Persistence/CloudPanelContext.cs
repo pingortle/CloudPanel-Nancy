@@ -17,6 +17,34 @@ namespace CloudPanel.Persistence
         }
     }
 
+    internal sealed class CloudPanelContextInitializer : DropCreateDatabaseAlways<CloudPanelContext>
+    {
+        protected override void Seed(CloudPanelContext context)
+        {
+            var noClaim = new Claim { Key = "None" };
+            var adminClaim = new Claim { Key = "Admin" };
+
+            context.Users.AddRange(new[] {
+                new User
+                {
+                    Username = "charlie@regularjoe.com",
+                    Password = "SomeDumbPassword",
+                    Guid = Guid.NewGuid(),
+                    Claims = new[] { noClaim, },
+                },
+                new User
+                {
+                    Username = "admin@important.stuff",
+                    Password = "SuperSecure",
+                    Guid = Guid.NewGuid(),
+                    Claims = new[] { adminClaim, },
+                },
+            });
+
+            context.SaveChanges();
+        }
+    }
+
     public sealed class CloudPanelContext : DbContext
     {
         public DbSet<User> Users { get; set; }
@@ -33,7 +61,7 @@ namespace CloudPanel.Persistence
 
         static CloudPanelContext()
         {
-            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<CloudPanelContext>());
+            Database.SetInitializer(new CloudPanelContextInitializer());
         }
     }
 }

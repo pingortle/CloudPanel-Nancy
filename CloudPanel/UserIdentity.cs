@@ -9,14 +9,14 @@ namespace CloudPanel
 {
     public class UserIdentity : IUserIdentity
     {
-        public IEnumerable<string> Claims
+        public UserIdentity(string userName, IEnumerable<string> claims)
         {
-            get { return new[] { "Admin", }; }
+            UserName = userName;
+            Claims = claims;
         }
 
-        public string UserName
-        {
-            get { return "Default"; }
-        }
+        public IEnumerable<string> Claims { get; private set; }
+
+        public string UserName { get; private set; }
     }
 }

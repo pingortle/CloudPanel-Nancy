@@ -13,6 +13,7 @@ namespace CloudPanel.Modules
         public AuthRoot()
         {
             this.RequiresAuthentication();
+            this.RequiresClaims(new[] { "Admin", });
 
             Get["/settings"] = _ => View["settings"];
         }
