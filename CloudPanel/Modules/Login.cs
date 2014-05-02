@@ -21,11 +21,7 @@ namespace CloudPanel.Modules
                     string username = Request.Form.uname;
                     string password = Request.Form.pword;
                     using (var ctx = new CloudPanelContext())
-                    {
-                        ctx.Database.Log = msg => Console.WriteLine(msg);
-                        var stuff = ctx.Users.ToArray();
                         user = ctx.Users.FirstOrDefault(y => y.Username == username && y.Password == password);
-                    }
 
                     if ( user != null)
                         return this.Login(user.Guid, DateTime.Now.AddMinutes(10));
